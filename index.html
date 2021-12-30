@@ -14,39 +14,66 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 
-    .card {
+    #nft-card {
+      display: flex;
+      flex-direction: column;
       background-color: hsl(216, 50%, 16%);
       width: fit-content;
       height: fit-content;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       margin: auto;
       padding: 35px;
+      flex-wrap: wrap;
     }
 
-    .image {
-      display: block;
+    #nft-image {
       background-color: white;
       margin: auto;
     }
 
-    h1 {
+    #nft-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 150px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    #nft-title {
+      display: flex;
+      align-items: center;
       color: white;
       font-weight: 400;
+      width: 100%;
+      height: 25%;
+      font-size: 32px;
+      vertical-align: center;
     }
 
-    p {
+    #nft-description {
+      display: flex;
+      align-items: center;
       color: hsl(215, 51%, 70%);
       font-size: 18px;
+      height: 25%;
     }
 
-    #eth-count {
+    #nft-value {
       display: flex;
-      float: left;
+      justify-content: flex-start;
+      align-items: center;
       color: hsl(178, 100%, 50%);
     }
 
-    #days-left {
+    #nft-timer {
       display: flex;
-      float: right;
+      justify-content: flex-end;
+      align-items: center;
       color: hsl(215, 51%, 70%);
     }
 
@@ -54,37 +81,47 @@
       border: none;
       border-top: 1px solid hsl(215, 32%, 27%);
       text-align: center;
-      height: 1px;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      width: 100%;
+      margin: unset;
     }
 
-    .footer {
+    #nft-creator {
+      display: flex;
+      align-items: center;
       font-size: 17px;
       color: hsl(215, 51%, 70%);
+      margin-top: 20px;
+    }
+
+    #avatar-image {
+      width: 35px;
+      margin-right: 20px;
+      border: 1px solid white;
+      border-radius: 20px;
     }
   </style>
 </head>
-<body style="background-color: hsl(217, 54%, 11%); font-family: Outfit;">
-  <div id="card" class="card">
-    <img src="./images/image-equilibrium.jpg" alt="" id="image" class="image">
+<body style="background-color: hsl(217, 54%, 11%); font-family: Outfit; display: flex; flex-direction: column;">
+  <div id="nft-card">
+    <img src="./images/image-equilibrium.jpg" alt="" id="nft-image">
     
-    <h1>Equilibrium #3429</h1>
+    <div id="nft-info">
+      <div id="nft-title">Equilibrium #3429</div>
 
-    <p>Our Equilibrium collection promotes balance and calm.</p>
+      <div id="nft-description">Our Equilibrium collection promotes balance and calm.</div>
 
-    <div id="eth-count"><img src="./images/icon-ethereum.svg" alt="" style="margin-right: 10px;">0.041 ETH</div>
-
-    <div id="days-left"><img src="./images/icon-clock.svg" alt="" style="margin-right: 10px;">3 days left</div><br>
-
+      <div style="display: flex; justify-content: space-between; align-items:center; width: 100%; height: 25%;">
+        <div id="nft-value"><img src="./images/icon-ethereum.svg" alt="" style="margin-right: 10px;">0.041 ETH</div>
+        <div id="nft-timer"><img src="./images/icon-clock.svg" alt="" style="margin-right: 10px;">3 days left</div>
+      </div>
+    </div>
+    
     <hr>
     
-    <div class="footer">
-      <img src="./images/image-avatar.png" alt="">Creation of Jules Wyvern
-    </div>
+    <div id="nft-creator"><img src="./images/image-avatar.png" alt="" id="avatar-image">Creation of Jules Wyvern</div>
   </div>
 
-  <div class="attribution">
+  <div class="attribution" style="display: flex; align-self: center;">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">João Lucas Dias</a>.
   </div>
