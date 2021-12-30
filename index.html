@@ -85,6 +85,13 @@
       margin: unset;
     }
 
+    #avatar-image {
+      width: 30px;
+      margin-right: 15px;
+      border: 1px solid white;
+      border-radius: 20px;
+    }
+
     #nft-creator {
       display: flex;
       align-items: center;
@@ -93,11 +100,14 @@
       margin-top: 15px;
     }
 
-    #avatar-image {
-      width: 30px;
-      margin-right: 15px;
-      border: 1px solid white;
-      border-radius: 20px;
+    #nft-creator-name {
+      color: white;
+      margin-left: 5px;
+      text-decoration: none;
+    }
+
+    #nft-creator-name:hover{
+      color: hsl(178, 100%, 50%);
     }
   </style>
 </head>
@@ -118,7 +128,7 @@
     
     <hr>
     
-    <div id="nft-creator"><img src="./images/image-avatar.png" alt="" id="avatar-image">Creation of Jules Wyvern</div>
+    <div id="nft-creator"><img src="./images/image-avatar.png" alt="" id="avatar-image">Creation of <a id="nft-creator-name" href="" target="">Jules Wyvern</a></div>
   </div>
 
   <div class="attribution" style="display: flex; align-self: center;">
