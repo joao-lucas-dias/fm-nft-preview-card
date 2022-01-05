@@ -27,36 +27,14 @@
       right: 0;
       margin: auto;
       padding: 25px;
+      flex-wrap: wrap;
       border-radius: 15px;
     }
 
     #nft-image {
-      display: block;
-      opacity: 1;
+      background-color: white;
       width: 100%;
-      border-radius: 15px;
-    }
-
-    #overlay {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(0, 255, 255, 0.5);
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 15px;
-    }
-
-    #container:hover #nft-image {
-      opacity: 1;
-    }
-
-    #container:hover #overlay {
-      opacity: 1;
+      border-radius: 10px;
     }
 
     #nft-info {
@@ -74,11 +52,6 @@
       width: 100%;
       height: 25%;
       font-size: 22px;
-      text-decoration: none;
-    }
-
-    #nft-title:hover {
-      color: hsl(178, 100%, 50%);
     }
 
     #nft-description {
@@ -112,13 +85,6 @@
       margin: unset;
     }
 
-    #avatar-image {
-      width: 30px;
-      margin-right: 15px;
-      border: 1px solid white;
-      border-radius: 20px;
-    }
-
     #nft-creator {
       display: flex;
       align-items: center;
@@ -127,28 +93,20 @@
       margin-top: 15px;
     }
 
-    #nft-creator-name {
-      color: white;
-      margin-left: 5px;
-      text-decoration: none;
-    }
-
-    #nft-creator-name:hover{
-      color: hsl(178, 100%, 50%);
+    #avatar-image {
+      width: 30px;
+      margin-right: 15px;
+      border: 1px solid white;
+      border-radius: 20px;
     }
   </style>
 </head>
 <body style="background-color: hsl(217, 54%, 11%); font-family: Outfit; display: flex; flex-direction: column;">
   <div id="nft-card">
-    <div id="container" style="position: relative;">
-      <img id="nft-image" src="./images/image-equilibrium.jpg" alt="">
-      <div id="overlay">
-        <img id="hover-image" src="./images/icon-view.svg" alt="">
-      </div>
-    </div>
+    <img src="./images/image-equilibrium.jpg" alt="" id="nft-image">
     
     <div id="nft-info">
-      <a id="nft-title" href="" target="">Equilibrium #3429</a>
+      <div id="nft-title">Equilibrium #3429</div>
 
       <div id="nft-description">Our Equilibrium collection promotes balance and calm.</div>
 
@@ -160,7 +118,7 @@
     
     <hr>
     
-    <div id="nft-creator"><img src="./images/image-avatar.png" alt="" id="avatar-image">Creation of <a id="nft-creator-name" href="" target="">Jules Wyvern</a></div>
+    <div id="nft-creator"><img src="./images/image-avatar.png" alt="" id="avatar-image">Creation of Jules Wyvern</div>
   </div>
 
   <div class="attribution" style="display: flex; align-self: center;">
