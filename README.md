@@ -13,4 +13,4 @@ Users should be able to:
 
 ## Demo
 
-- Live Site URL: https://joao-lucas-dias.github.io/nft-preview-card/
+- Live Site URL: https://joao-lucas-dias.github.io/fm-nft-preview-card/
